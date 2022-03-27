@@ -1,0 +1,35 @@
+
+
+*******************************************************************************
+Fri Mar 25 21:26:56 2022
+
+
+FIT:    data read from 'salida4.dat'
+        format = z
+        #datapoints = 24
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*log(x)+a1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 6.3571772285e+15   0.00e+00  9.40e+06    1.000000e+00   1.000000e+00   1.000000e+00
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Fri Mar 25 21:27:55 2022
+
+
+FIT:    data read from 'salida4.dat'
+        format = z
+        #datapoints = 24
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*log10(x)+a1
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 9.2390946016e+00   0.00e+00  6.00e-01   -4.035854e-08   9.999999e-01   1.001000e+00
+BREAK: Singular matrix in Invert_RtR

@@ -1,0 +1,46 @@
+
+¿QUÉ HAY QUE HACER EN LA PRÁCTICA DE ALGORÍTMICA?
+
+1. Cada uno de los integrantes del grupo debe de ejecutar TODOS los algoritmos (inserción, selección, heapsort, quicksort, floyd y hanoi) en LINUX:
+	
+	1.1 En primer lugar, ejecución sin optimización: simplemente se ejecutan los códigos y se obtienen unos tiempos. Luego, con gnuplot se hace la gráfica, se saca la ecuación y ya está. La gráfica que hay que sacar es la que está formada por los puntos y la función de ajuste.
+	
+	1.2 Luego se ejecutan con optimización, TODOS en LINUX.
+	Se obtienen gráficas y ecuaciones.
+	
+2. Ejecución en otro sistema operativo:
+
+	2.1 Todos lo vamos a tener en LINUX hecho, pero hace falta tenerlo también en otro sistema operativo: Windows, por ejemplo, que es el que más a mano tenemos. Para esto, como hay que hacerlo con y sin optimización para luego hacer gráficas comparativas, el trabajo es grande, luego la forma óptima de repartirnoslo sería esta por ejemplo: dos cada uno, hacerlos con y sin optimización en WINDOWS.
+	
+3. Análisis teórico de la eficiencia: Aquí solamente hay que hacer 4 algoritmos: inserción, quicksort, floyd y hanoi, que son los que ya habíamos decidido. 
+
+
+EN LA MEMORIA (EL PDF) SE TIENE QUE INCLUIR LO SIGUIENTE:
+
+Para cada algoritmo:
+
+	1. Descripción del algoritmo
+	2. Imagen del código del algoritmo (que el fondo no sea negro)
+	3. Eficiencia teórica del algoritmo
+	4. Eficiencia empírica del algoritmo (hay que incluir tablas, que las haremos en excel o similar, con los tiempos de ejecución del algoritmo de cada uno de los integrantes del grupo (es decir, se combinan los datos de los archivos de salida que hayamos obtenido cada uno en la ejecución). Hay que hacer dos tablas, una con los datos de la salida sin optimizar y otra con la optimización hecha).
+	5. Análisis gráfico (se incluirán una gráficas de cada uno de los integrantes del grupo, y en cada una hay que representar dos funciones: la que sale de los datos sin la optimización y otra con la optimización).
+	6. Análisis híbrido (ecuación de ajuste con y sin optimización. Incluir las gráficas individuales de cada integrante del grupo obtenidas en el punto 1.1).
+	7. Comparación final en linux (una gráfica en la que se incluyen las tres funciones anteriores). 
+	8. Comparativa en otro sistema operativo (Windows) (este apartado es propio para cada uno de los integrantes del grupo, según los dos algortimos que les haya tocado: Por ejemplo, si me toca el de inserción, en el aparatdo del pdf en el que se incluya en análisis de dicho algoritmo, hemos de incluir una gráfica en la que compraremos dos funciones: la que se obtiene con la optimización y sin la optimización en Windows, otra con la otimización en Linux y Windows, y otra sin optimización en Windows y Linux).
+	
+	9. En el guión de prácticas en el punto 4 de las tareas a realizar pone lo siguiente: "Para inserción y selección hagan un gráfico con el peor caso el caso promedio y el mejor caso. Vean las diferencias".
+	   
+	   Aquí lo que hay que hacer es medir los tiempos para un vector que esté ordenado (mejor caso), otro desordenado (caso promedio), y otro que esté ordenado en orden inverso (peor caso).
+	
+EN LA PRESENTACIÓN:
+
+Para cada algoritmo:
+
+	Estructura de las diapositivas por algoritmo:
+		1ª. Descripción de cómo se han obtenido los tiempos de ejecución (esto es, hacerle captura a la macro que se ha hecho para ejecutar, y explicarla). 
+		2ª. Gráficas que comparan el código con y sin optimización (ponemos en una misma diapositiva las tres gráficas). Nota: En cada gráfica dos funciones.
+		3ª. Ajuste de la nube de puntos a una función (aqui incluimos tres gráficas (una por cada integrate del grupo, en la que debe aparecer la nube de putos ajustada). Debajo de cada gráfica incluimos la ecuación de ajuste obtenida y el coeficiente de correlación (nos lo da gnuplot).
+		4ª. Comparación final (aquí incluimos una gráfica en la que aparezcan las tres funciones, (una por cada integrante del grupo).
+		5ª. Comparativa con otro sistma operativo(La persona a la que le tocase este algoritmo deberá incluir una gŕafica en la que aparezcan dos funciones (con y sin optimización) y otra comparando con Linux (dos gráficas, una con optimización (función en linux optimzada y función en windows optimizada) y otra sin optimización (función en linux optimzada y función en windows optimizada))).
+		
+		

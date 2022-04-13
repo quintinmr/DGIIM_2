@@ -1,0 +1,30 @@
+1 tabla de resutados por persona, para cada unos de los 4 algoritmos.
+
+TABLA:
+	
+	Inserción/Seleccion  |  Quicksort/heapsort  ... 
+  p1   |
+       |
+       |
+       |
+       
+       ...
+       
+       |
+       
+  p2 ...
+  .
+  .
+  .
+  
+  
+ GRAFICAS (todos lo tenemos que hacer):
+ 
+ 	--> Selección / inserción: una gráfica en la que aparezca el peor caso, el 	
+ 	    mejor caso.
+ 	--> Una con los algoritmos de orden cuadrático
+ 	--> Otra para los otros dos
+ 	--> Otra en la que aparezcan mezclados... como ya veamos
+ 	--> Para distintos software, ya cada uno hace una cosa, no todos hacemos todo
+ 	
+ 	

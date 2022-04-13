@@ -1,0 +1,39 @@
+///////////////////////////////////////////////
+/					       /
+/	 PRÁCTICA 2 - DIVIDE Y VENCERÁS       /
+/					       /
+//////////////////////////////////////////////
+
+   --> ||  EJERCICIO 1  ||
+   
+   	(Algortimo que, dado un vector ordenado (números distintos,
+   	 encuentre un i tal que v[i] = i))
+   	--> Hacer algoritmo "obvio" (el de fuerza bruta, programandolo como toda la vida)
+   	--> Hacer algoritmo "divide y vencerás"
+   
+   	--> Hacer análisis teórico, empírico e híbrido de ambos algoritmos.
+   	
+   	--> Constestar a la pregunta final: En el suspuesto de los elementos 
+   	    del vector no tuvieran que ser todos distintos, ¿sigue siendo 
+   	    preferible el algoritmo obvio?
+   	
+   
+   --> ||  EJERCICIO 2  ||
+   
+   	(Dados k vectores ordenados de menor a mayor, con n elementos cada uno y 
+   	queremos combinarlos en un único vector ordenado, con kn elementos).
+   	
+   	--> Algoritmo clásico: mezclar los dos primeros, luego el resultante mezclar
+   	    con el tercero, y así sucesivamente.
+   	    Análisis teórico.
+        
+        --> Ver si existe un algoritmo más eficiente (que tiene pinta de que sí
+            porque para eso está puesta la pregunta digo yo, aunque no tiene por
+            qué).
+            
+   	--> Análisis emírico e híbrido de ambos algoritmos.
+   	
+   
+   HACER MEMORIA DE TODO ESTO Y PRESENTACIÓN
+  
+NOTA: Para hacer las comparaciones hay que utilizar los mismos valores de n

@@ -1,0 +1,111 @@
+
+
+*******************************************************************************
+Fri Apr 22 19:31:49 2022
+
+
+FIT:    data read from 'salida_Ej1.dat'
+        format = z
+        x range restricted to [-2.49711e-08 : 2.00000e+06]
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*log10(a1*x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1           
+   0 8.5309838879e+02   0.00e+00  4.15e+00    1.000000e+00   1.000000e+00
+  50 4.7205789965e-05  -4.46e-01  4.15e-05    4.300938e-03   1.644870e-05
+
+After 50 iterations the fit converged.
+final sum of squares of residuals : 4.72058e-05
+rel. change during last iteration : -4.45732e-06
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00143263
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.05243e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00430094       +/- 0.0005707    (13.27%)
+a1              = 1.64487e-05      +/- 5.81e-06     (35.32%)
+
+correlation matrix of the fit parameters:
+                a0     a1     
+a0              1.000 
+a1             -0.901  1.000 
+
+
+*******************************************************************************
+Fri Apr 22 19:31:52 2022
+
+
+FIT:    data read from 'salida_Ej1.dat'
+        format = z
+        x range restricted to [-2.49711e-08 : 2.00000e+06]
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*log10(a1*x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1           
+   0 4.7205789965e-05   0.00e+00  3.75e-03    4.300938e-03   1.644870e-05
+   1 4.7205789965e-05  -3.29e-08  3.75e-04    4.300938e-03   1.644871e-05
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 4.72058e-05
+rel. change during last iteration : -3.28723e-13
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00143263
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.05243e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00430094       +/- 0.0005707    (13.27%)
+a1              = 1.64487e-05      +/- 5.81e-06     (35.32%)
+
+correlation matrix of the fit parameters:
+                a0     a1     
+a0              1.000 
+a1             -0.901  1.000 
+
+
+*******************************************************************************
+Fri Apr 22 19:31:56 2022
+
+
+FIT:    data read from 'salida_Ej1.dat'
+        format = z
+        x range restricted to [-2.49711e-08 : 2.00000e+06]
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*log10(a1*x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1           
+   0 4.7205789965e-05   0.00e+00  3.75e-03    4.300938e-03   1.644871e-05
+   1 4.7205789965e-05  -9.47e-10  3.75e-04    4.300938e-03   1.644871e-05
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 4.72058e-05
+rel. change during last iteration : -9.47412e-15
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00143263
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.05243e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00430094       +/- 0.0005707    (13.27%)
+a1              = 1.64487e-05      +/- 5.81e-06     (35.32%)
+
+correlation matrix of the fit parameters:
+                a0     a1     
+a0              1.000 
+a1             -0.901  1.000 

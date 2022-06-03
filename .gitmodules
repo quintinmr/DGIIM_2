@@ -1,3 +1,6 @@
 [submodule "C2/INFORMÁTICA/PDOO/DeepSpace"]
 	path = C2/INFORMÁTICA/PDOO/DeepSpace
 	url = https://github.com/quintinmr/DeepSpace.git
+[submodule "C2/INFORMÁTICA/PDOO/C2/INFORMÁTICA/PDOO/DeepSpace"]
+	path = C2/INFORMÁTICA/PDOO/C2/INFORMÁTICA/PDOO/DeepSpace
+	url = https://github.com/quintinmr/DeepSpace.git

@@ -1,0 +1,11 @@
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/subimagen.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/image.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/icono.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/negativo.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/contraste.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/barajar.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/crear_eficiencia.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/zoom.dir
+/home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug/CMakeFiles/doc_doxygen.dir

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/estudiante/src/ejemplo_stl.cpp
+stack
+-
+queue
+-
+iostream
+-
+

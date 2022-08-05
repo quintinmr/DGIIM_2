@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ejemplo_stl.dir/estudiante/src/ejemplo_stl.cpp.o -o ejemplo_stl  libmaxstack.a libmaxqueue.a 

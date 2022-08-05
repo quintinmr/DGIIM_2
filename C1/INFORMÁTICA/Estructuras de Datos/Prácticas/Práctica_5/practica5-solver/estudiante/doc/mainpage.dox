@@ -1,0 +1,54 @@
+/*! \mainpage Solver Letras
+
+@image html cyl.png
+
+# Introducción
+
+"La creatividad es la inteligencia divirtiéndose", dijo Albert Einstein. Y qué razón tenía aquel físico alemán que tanta
+repercusión ha tenido en la historia; esa capacidad característica del ser humano de generar nuevas ideas y nuevos conceptos
+de forma espontántea y en parte, como forma de entretenimiento, es una de las cosas que ha llevado hasta donde estamos como civilización. La capacidad
+de crear imaginando y plasmarlo en la realidad física es la llave maestra que nos ha abierto la puerta a multitud de descubrimientos. Esto
+acompañado de nuestras ganas de divertirnos, hacen la mezcla perfecta para la creación de lo que denominamos "juegos". Dada la infinita
+imaginación del ser humano, se han desarrollado miles de juegos de distinta índole en los que se ejercita alguna destreza o
+capacidad, como por ejemplo el juego del que trata esta práctica: ***El juego de las letras***.Todo el proceso de "cañería" del
+juego, es decir, los TDAs que se han usado para poder implementarlo, se documentaron y se implementaron en la práctica
+anterior. En la práctica que nos concierne, nos centraremos particularmente en el proceso de resolución del juego, por medio
+de la creación de un Solver: un sistema que resuelve un problema de forma automática, dando la/s, mejor/es solución/es, a partir
+de un diccionario en el que se encuentran todas las palabras posibles con sentido que se podrían formar, y un LetterSet, con
+las letras, la cantidad disponible de cada letra y su correspondiente puntuación. Recordemos que el juego de las letras
+consiste en formar la mejor palabra posible teniendo en cuenta uno de los dos criterios posibles:
+la longitud de la palabra (gana la más larga encontrada), o la puntuación de la palabra (igual a la suma de las puntuaciones
+de cada letra), dadas unas letras escogidas aleatoriamente. Para probar el Solver vamos a presentar a continuación el siguiente
+programa:
+
+# Ejecutables
+
+## Partida_Letras
+
+Programa de prueba del funcionamiento del TDA Solver.
+
+Este programa se encarga de construir a partir de un fichero con las letras, su cantidad y puntuación, que se pase como
+argumento, el LetterSet para la partida, un diccionario a partir de un fichero que se pasa también como argumento con las
+palabras en su totalidad que se pueden formar, con sentido. A partir del LetterSet construído con el operdador de entrada
+de dicho TDA, se crea una LettersBag (se usa el constructor con parámetros), a partir del cual se extraerán las letras
+que se podrán utilizar para jugar; para formar las palabras de acuerdo con el modo de juego elegido, que se debe indicar como
+argumento (el tercero), y ha de ser L (juego a longitud), o P (juego a puntuación), única y exclusivamente. Se extraerán del
+LettersBag tantas letras como se haya indicado en el último argumento a introducir. Con estas letras el Solver tratará de buscar
+las soluciones del juego. Finalmente, una vez encontradas las palabras que solucionan el juego, se imprimirán por pantalla, tanto
+las letras para la partida, como las mejores soluciones que se puedenn obtener con dichas letras y la puntuación de dichas
+soluciones.
+
+> __partida_letras__ \<ruta_archivo_letras\> \<ruta_archivo_diccionario\> \<modo_juego\> \<cantidad_letras\>
+@param <ruta_archivo_letras> Nombre del archivo que contiene las letras con la cantdad disponible y su puntuación
+@param <ruta_archivo_diccionario> Nombre del archivo que contiene las palabras que constituyen el diccionario
+@param <modo_juego> Dato de tipo char, L, si el juego es a longitud, o P, si es a puntuación
+@param <cantidad_letras> Entero que indica el número de letras que se deberán usar en la partida
+@pre modo_juego debe ser L o P
+@pre cantidad_letras > 0
+@return Imprimir por pantalla las letras disponibles para la partida, las mejores soluciones y la puntuación de las soluciones.
+
+__Ejemplo de ejecución:__
+
+@image html partida.png
+
+*/

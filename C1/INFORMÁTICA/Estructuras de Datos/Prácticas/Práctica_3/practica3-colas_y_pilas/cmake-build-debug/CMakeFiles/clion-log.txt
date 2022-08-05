@@ -1,0 +1,5 @@
+/opt/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug

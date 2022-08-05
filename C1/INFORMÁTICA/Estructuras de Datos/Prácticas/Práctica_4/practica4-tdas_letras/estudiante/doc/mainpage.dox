@@ -1,0 +1,83 @@
+/*! \mainpage Título de la página principal
+
+@image html cyl.png
+
+# Introducción
+El popular juego conocido por el nombre "Cifras y Letras" ha dado la vuelta al mundo a través de
+numerosos concursos de televisión, hasta tal punto que hoy se ha dejado caer sobre la práctica de la que hoy hablamos.
+En ella abordaremos el juego de las letras, el cual consiste en formar la mejor palabra posible (teniendo en cuenta uno
+de los dos criterios posibles: la longitud de la palabra (gana la más larga encontrada), o la puntuación de la palabra (igual
+a la suma de las puntuaciones de cada letra)). Concretamente, llevaremos a cabo la implementacón de varios TDA, necesarios para
+poder desarrollar posteriormente el juego, como son: LetterSet, LettersBag, Dictionary, Bag. En ellos se utilizarán tanto TDAs
+no lineales (map, set), como lineales (vector). Para cada uno de dichos TDAs, se han hecho una serie de programas ejecutables
+que son los que a continuación se presentan, junto con los resultados de su ejecución.
+
+# Ejecutables
+
+## Bolsa
+
+Programa que introduce una serie de caracteres o enteros en una bolsa (bag), para despues extraerlos de forma aleatoria hasta que
+la bolsa quede vacía. El que la bolsa sea de caracteres o de enteros depende únicamente del primer argumento pasado, que bien puede
+ser la letra C (caracteres) o bien I (enteros).
+
+> __bolsa__ \<tipo_bolsa\> \<elemento1\> \<elemento2\> . . . \<elementok\>
+@param <tipo_bolsa> Carácter (C o I) para determinar el tipo de dato de los elementos que cotendrá la bolsa
+@param <elemento1>,<elemento2>,<.>,<elementok> Lista de enteros/caracteres que se desean introducir en la bolsa
+@return Devuelve los elementos listados como parámetros, extrayéndolos de la bolsa aleatoriamente
+@post El objeto Bag es modificado
+
+
+__Ejemplo de ejecución:__
+
+@image html bolsa.png
+
+## Bolsa_Letras
+
+Programa de prueba para la clase LettersBag que extrae de forma aleatoria todas las letras de una LettersBag construída a patir de un
+LetterSet, a su vez construído a partir del fichero que se da como argumento, y las imprime por pantalla.
+Se usa el constructor con parámetros y el operador de salida de la clase LettersBag.
+
+> __bolsa_letras__ \<nombre_fichero\>
+@param <nombre_fichero> Fichero con las letras, su repeticón y su puntuación
+@pre El fichero que se pasa como argumento no debe estar vacío
+@return Devuelve por pantalla las letras del LettersSet construido a partir del fichero, de forma aleatoria
+@post El objeto LettersBag es modificado
+
+__Ejemplo de ejecución:__
+
+@image html bolsa_letras.png
+
+## Conjunto_Letras
+
+Programa de prueba para la clase LetterSet que imprime por pantalla la puntuación de una palabra introducida como parámetro
+Crea un objeto de la clase LetterSet a partir de un fichero de datos introducido como argumento y a continuación calcula
+a través de ese objeto, la puntuación de la palabra que se ha pasado como argumento.
+
+> __conjunto_letras__ \<nombre_fichero\> \<palabra\>
+@param <nombre_fichero> Archivo a partir del cual crear un LettersSet
+@param <palabra> Palabra a la que calcular la puntuación
+@pre El fichero pasado como argumento no debe estar vacío
+@return La puntuación de la palabra
+@post El objeto LetterSet no es modificado
+
+__Ejemplo de ejecución:__
+
+@image html conjunto_letras.png
+
+## Palabras_longitud
+
+Programa de prueba para la clase Dictionary que construye un Dictionary a partir de un fichero con palabras que se le pasa
+como argumento, y extrae de dicho diccionario las palabras de la longitud que buscamos imprimiéndolas por pantalla.
+
+> __palabras_longitud__ \<nombre_fichero\> \<longitud_palabra\>
+@param <nombre_fichero> Fichero con una serie de palabras conformando un diccionario
+@param <longitud_palabra> Entero con la longitud de las palabras que buscamos
+@pre El fichero pasado como argumento no debe estar vacío
+@pre  longitud_palabra > 0
+@return Muestra en pantalla las palabras del diccionario de la longitud pasada como parámetro
+@post El objeto no es modificado
+
+__Ejemplo de ejecución:__
+
+@image html palabra_longitud.png
+*/

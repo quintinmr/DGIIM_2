@@ -1,0 +1,8 @@
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/ejemplo_stl.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/maxstack.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/pila_max.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/maxqueue.dir
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/CMakeFiles/cola_max.dir

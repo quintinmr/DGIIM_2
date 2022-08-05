@@ -1,0 +1,26 @@
+# ninja log v5
+0	636	1639394272229873887	CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o	8d376cb18548ddb8
+0	101	0	CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	490	1639394272085899064	CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o	5d8b69a201c08a43
+0	84	1639397334154776651	build.ninja	b162297b953ac6f4
+0	101	0	/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	481	1639394272077900462	CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o	15097a34184941d3
+0	485	1639394272081899763	CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o	8fef66a773380a93
+657	736	1639394272329856403	partida_letras	ad4d38bc342f32e9
+1	657	1639394272253869691	CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o	39742cadbc12417c
+1	402	1639397351502558829	CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o	15097a34184941d3
+1	487	1639397351586557770	CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o	8fef66a773380a93
+1	491	1639397351590557720	CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o	39742cadbc12417c
+1	613	1639397351710556207	CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o	5d8b69a201c08a43
+1	638	1639397351738555853	CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o	8d376cb18548ddb8
+638	700	1639397351798555097	partida_letras	ad4d38bc342f32e9
+0	229	0	CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	229	0	/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	220	0	CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	220	0	/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen	c40bee970b817f7e
+0	360	1646808201848746428	CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o	8d376cb18548ddb8
+0	419	1646808201908746254	CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o	15097a34184941d3
+0	463	1646808201952746127	CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o	39742cadbc12417c
+0	481	1646808201968746080	CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o	8fef66a773380a93
+0	522	1646808202008745964	CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o	5d8b69a201c08a43
+522	595	1646808202084745744	partida_letras	ad4d38bc342f32e9

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../estudiante/include/bag.h
+vector
+-
+iostream
+-
+ctime
+-
+algorithm
+-
+
+../estudiante/include/letters_bag.h
+bag.h
+../estudiante/include/bag.h
+letters_set.h
+../estudiante/include/letters_set.h
+iostream
+-
+
+../estudiante/include/letters_set.h
+map
+-
+string
+-
+iterator
+-
+iostream
+-
+
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_4/practica4-tdas_letras/estudiante/src/bolsa_letras.cpp
+iostream
+-
+fstream
+-
+letters_bag.h
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_4/practica4-tdas_letras/estudiante/src/letters_bag.h
+

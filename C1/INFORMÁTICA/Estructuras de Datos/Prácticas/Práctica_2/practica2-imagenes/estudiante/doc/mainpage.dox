@@ -1,0 +1,283 @@
+/*! \mainpage Astracción. TDA Imagen
+
+@image html monal.png
+
+# Información sobre Doxygen
+Doxygen admite el uso de la [sintaxis de Markdown (Consulta aquí los comandos básicos)](https://www.markdownguide.org/basic-syntax).
+
+Así como el uso de  <a href="https://htmlcheatsheet.com/">sintaxis <strong>HTML</strong></a>. Esto es especialmente útil
+para aquellos aspectos que Markdown no permite modificar, como el <span  style="color:red">color</span>. Aunque es buena idea evitarlo en la medida de lo posible, por dos
+motivos:
+
+1. <span style="font-size:1.1em">Hace el código <strong>poco</strong> <span style="  background-image: linear-gradient(to left, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; color: transparent;"> <strong> LEGIBLE </strong> </span></span>
+2. La idea detrás de Markdown es separar _aspecto_ y _contenido_. Y es una __gran idea__.
+
+La forma más correcta de modificar el aspecto debería ser mediante un documento ``.css`` configurado en el archivo ``Doxyfile.in``.
+Si te interesa, puedes echarle un vistazo a la [documentación](https://www.doxygen.nl/manual/customize.html) o a
+temas customizados como [este](https://jothepro.github.io/doxygen-awesome-css/). Aunque el tema por defecto nos parece
+perfecto, _CLÁSICO_. Así puedes centrarte en el contenido.
+
+Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fuente proporcionado, pero puedes consultar la
+mayor parte de la sintaxis de Doxygen para comentar código en su
+[documentación](https://www.doxygen.nl/manual/docblocks.html).
+
+
+# Introducción
+
+Si pensamos en el concepto de imagen, seguramente lo primero que se nos viene a la cabeza es una representación visual
+de un objeto, persona, o lugar, bien sean reales o imaginarios. La realidad que nos rodea y la que nos
+imaginamos da lugar a miles de millones de imágenes, con infinidad de detalles que difieren unos de otros, pero, dado que
+el ser humano es un ser racional, somos capaces de realizar un proceso de abstracción sobre el concepto de imagen. Este hecho
+nos permite definir un tipo de dato abstracto Imagen, sobre el cual trata esta práctica. En ella, nos centramos en una
+instancia del tipo de dato abstracto Imagen, la cual nos permite almacenar imágenes de intensidades. Además dicho TDA nos aporta
+múltiples herramientas para la manipulación de dichas imágenes, que se verán a contiuación. Se han implementado una serie
+de métodos que modifican imágenes o generan otras con características distintas a las del objeto inicial, cada uno de los cuales tiene
+un fichero ejecutable .cpp asociado:
+
+
+# Ejecutables
+
+@image html invert2.png "Imagen Original ➔ Negativo"
+## Negativo:
+
+Programa que calcula el negativo de una imagen. Trabaja sobre la imagen original que se le especifique como parámetro
+modificando cada uno de sus píxeles por su correspondiente complementario. El complementario de un pixel de intensidad *x* es *255-x*
+
+> __negativo__ \<FichImagenOriginal\> \<FichImagenDestino\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
+@post La imagen se modifica y los píxeles tendrán valores complementarios.
+
+@image html crop.png "Imagen Original ➔ Subimagen"
+## Subimagen:
+
+Programa que realiza, por copia, la extracción de una subimagen, de la imagen que se le especifique como parámetro,
+necesariamente de un tamaño menor o igual que la original.
+
+> __subimagen__ \<FichImagenOriginal\> \<FichImagenDestino\> \<nrow\> \<ncol\> \<height\> \<width\>
+@param "<FichImagenOriginal>" Imagen que se va a recortar
+@param "<FichImagenDestino>" Imagen PGM resultado de recortar la imagen
+@param "nrow" Fila inicial para recortar (esquina superior izquierda)
+@param "ncol" Columna inicial para recortar (esquina superior izquierda)
+@param "height" Altura de la imagen recortada; número de filas
+@param "width" Ancho de la imagen recortada; número de columnas
+@pre 0 <= nrow < rows, 0 <= ncol < cols
+@pre 0 < height <= rows - nrow, 0 < width <= cols - ncol
+@return Imagen con el recorte
+@post El objeto que llama a la función no se modifica
+
+
+@image html zoom.png "Imagen Original ➔ zoom2x"
+
+## Zoom2x:
+
+Programa mediante el cual se obtiene una nueva imagen del doble de tamaño, asignando a la nueva imagen los pixeles de la imagen anterior pero en
+una nueva posición (la correspondiente a duplicar la posición anterior). Se lleva a cabo un proceso de varias interpolaciones:
+una primera interpolación por columnas asigando a los pixeles de las filas pares y columnas impares la media de los elementos que tienen a la derecha
+e izquierda. Luego una segunda interpolación por filas asignando a los pixeles de las filas impares y columnas
+pares la media de los elementos que tienen justo encima y debajo. Por último, se rellenan los elementos
+de las filas impares y columnas impares (centrales) con la media de los elementos que tienen en sus esquinas.
+
+> __zoom2x__ \<FichImagenOriginal\> \<FichImagenDestino\> \<nrow\> \<ncol\> \<side\>
+@param "<FichImagenOriginal>" Imagen a la que se le va a hacer el zoom
+@param "<FichImagenDestino>" Imagen PGM resultado de aumentar la imagen x2
+@param nrow Fila incial para ampliar (esquina superior izquierda)
+@param ncol Columan incial para ampliar (esquina superior izquierda)
+@param side lado de la imagen aumentada
+@pre La matriz original debe ser cuadrada (rows == cols)
+@pre 0 <= nrow < rows, 0 <= ncol < cols
+@pre 0 < side <= rows - nrow
+@returns Imagen aumentada 2x
+@post El objeto que llama a la función no se modifica
+
+
+@image html icono.png "Imagen Original ➔ Icono"
+
+## Icono:
+
+Programa que genera un icono a partir de una imagen, es decir, devuelve una imagen de un tamaño muy reducido,
+a partir de la imagen original que se le especifique como parámetro. El proceso que se sigue para la reducción de la imagen consiste en
+la modificación de cada uno de sus píxeles por la media de los *NxN* píxeles de la imagen de entrada, en el caso de que
+el factor de reducción a aplicar sea de *Nx*. Para el cálculo de las medias antes mencionadas, se ha implementado el método
+adicional __Mean__
+
+> __icono__ \<FichImagenOriginal\> \<FichImagenDestino\> \<factor\>
+@param "<FichImagenOriginal>" Imagen que se va a iconizar
+@param "<FichImagenDestino>" Imagen PGM en la que se guarda la imagen iconizada
+@param "factor" Factor de reducción
+@pre factor > 0
+@return Imagen iconizada
+@post La imagen inicial no se modifica
+@post La imagen iconizada será de orden int(rows/fcator) x int(cols/factor)
+
+@image html contraste.png "Imagen Original ➔ Modificación de contraste"
+
+## Contraste:
+
+Porgrama que modifica el contraste de una imagen, generando una imagen de niveles de gris con más contraste que la original.
+Para ello, se aplica lo que se conoce como: *estiramiento del histograma*, que consiste en la aplicación de una transformación lineal
+a trozos sobre los valores de los píxeles de la imagen. Dicha transformación lineal depende del valor de cada uno de los píxeles y se
+ha deducido su implementación de la siguiente gŕafica: @image html trfl.png
+
+> __contraste__ \<FichImagenOriginal\> \<FichImagenDestino\> \<in1\> \<in2\> \<in3\> \<in4\>
+@param "<FichImagenOriginal>" Imagen a la que se le va a modificar el contraste
+@param "<FichImagenDestino>" Imagen PGM con el contraste modificado
+@param in1 Umbral inferior de la imagen de entrada
+@param in2 Umbral superior de la imagen de entrada
+@param out1 Umbral inferior de la imagen de salida
+@param out2 Umbral superior de la imagen de salida
+@pre 0 <= (in1, in2, out1, out2) <= 255
+@pre in1 < in2
+@pre out1 < out2
+@post El objeto que llama a la función es modificado
+
+@image html shufflerows.png "Imagen Original ➔ Imagen barajada"
+
+## ShuffleRows:
+
+Programa que baraja pseudoaleatoriamente las filas de una imagen. La imagen original, tras la ejecución del programa, ve
+alterada sus filas, dispuestas en otro orden según el algoritmo:  ***r' = (rxp) mod rows***, donde r' es el nuevo índice de
+la fila r, p es un coprimo de rows y rows es el número de filas de la imagen.
+
+> __shuffleRows__ \<FichImagenOriginal\> \<FichImagenDestino\>
+@param "<FichImagenOriginal>" Imagen original a la que se le van a barajar las filas
+@param "<FichImagenDestino>" Imagen PGM con las filas barajadas
+@post El objeto que llama a la función se modifica. Las filas quedan barajadas.
+
+### Análisis de la eficiencia teórica y empírica del método ShuffleRows
+
+En esta sección se va a realizar un análisis sobre la eficiencia tanto teórica como empírica, del método ShuffleRows.
+Para la eficiencia empírica, se ha creado un programa [__crear_eficiencia.cpp__], para analizar la complejidad en tiempo del
+método anteriormente mencionado, es decir, mediremos tiempos de ejecución de las dos implementaciones que tenemos del método
+para diferentes entradas de datos. Dicho programa vierte sus salidas en un fichero destino. A partir de esas salidas, con la ayuda del
+programa ***excel***, se obtendrán unas gráficas en las que se reperesetaran las nubes de puntos correspondientes junto con
+sus rectas de regresión. A partir de esto, se hará una comparativa con la teórica para posteriormente sacar conclusiones acerca de la eficiencia de
+ambas implementaciones y determinar cuál la más eficiente.
+
+####Análsis de la eficiencia teórica del método ShuffleRows####
+
+En primer lugar, llevaremos a cabo un análisis teórico de la eficiencia de la primer versión del método SuffleRows:
+
+void Image::ShuffleRows() {
+
+     const int p = 9973;
+
+     Image temp(rows,cols);
+
+     int newr;
+
+     for (int r=0; r<rows; r++){
+
+
+         newr = r*p%rows;
+
+         for (int c=0; c<cols;c++)
+
+             temp.set_pixel(newr,c,get_pixel(r,c));
+
+     }
+
+     Copy(temp);
+
+ }
+
+En primer lugar, tenemos una sentencia de asignación, operación elemental que es de orden O(1). A continuación,
+encontramos un doble ciclo for, y analizándolo desde el bucle más interno al más externo obtenemos:
+@image html 1.png
+Donde usamos que la eficiencia de set_pixel es de 3, que pertenece a ***O(1)***
+@image html 2.png
+Donde usamos que la eficiencia de la sentencia del bucle externo es de 3, es decir, está en ***O(1)***.
+La función Copy(temp) es de orden ***O(rows*cols)***
+Por tanto, aplicando la regla de la suma obtenemos que la eficiencia de esta versión del método es ***O(rows*cols)***(cuadrática).
+
+A continuación, analizaremos de forma teórica la eficiencia de la segunda versión del método ShuffleRows (implementada por
+osotros):
+
+void Image::ShuffleRows(){
+
+    const int p = 9973;
+
+    int topRows = this->get_rows();
+
+    byte ** aux = new byte * [topRows];
+
+    for (int r=0; r<topRows; r++)
+
+        aux[r] = img[(r*p)%topRows];
+
+    for (int r=0; r<topRows; r++)
+
+        img[r] = aux[r];
+
+    delete [] aux;
+
+    aux = nullptr;
+
+}
+
+En primer lugar observamos que tenemos 3 sentencias de asignación, cuyas eficiencias son  O(1). Posteriormente tenemos
+un bucle for, en cuyo interior encontramos una sentencia de asignación cuya eficiencia es 5 (dos indexaciones,
+una asignación y dos operaciones aritméticas). La eficiencia de este bucle es:
+@image html 3.png
+A continuación del bucle anterior tenemos otro ciclo for con una sentencia de asignación de eficiencia 3, luego la
+eficiencia del bucle sería:
+@image html 4.png
+Por último tenemos dos sentencias que son ambas O(1), luego aplicando la regla de la suma obtenemos que la eficiencia
+total del método es O(rows), es decir, lineal.
+
+####Análsis de la eficiencia empírica del método ShuffleRows####
+
+Para llevar este análisis a cabo, se ha usa usado el programa **crear_eficiendcia.cpp** antes mencionado, para las dos
+implementaciones del método ShuffleRows (la proporcionada por el profesor y la implementada por nosotros), de tal forma que,
+tras su ejecución se generará un fichero con los datos necesarios para la obtención de las correspondiente nubes de puntos y las
+ecuaciones de las curvas que ajustan dichas nubes:
+
+#####Primera implementación del método ShuffleRows#####
+
+En esta [__hoja de cálculo__] se tienen los resultados de la ejecución del programa crear_eficiencia.cpp, para la implementación
+del método proporcionada por el profesor. A partir de esos datos, se ha usado la graficadora de excel para la generación
+de las nubes de putos ***(size, elapsed)***, de ***(rows, T rows)***, y de ***(cols, T cols)*** ,y sus respectivas curvas de
+regresión:
+@image html 5.png
+A simple vista, observamos que las curvas generadas ajustan bastante bien a los puntos, hecho que se corrobora
+por ejemplo con el coeficiente de correlación, calculado en la primer gráfica (0.93 (recordemos que cuanto más próximo a 1
+mejor ajusta la curva a la nube de puntos)). La función que representa la eficiencia del método y que más se ajusta a los
+tiempos obtenidos según el tamaño del problema especificado es:
+
+> ***f(x) = 1146x^2 – 2313x + 119567***
+
+lo cual indica que el método es de clase ***O(n^2)***. El análisis teórico nos decía que el método era ***O(nrows, ncols)***, es decir, de orden cuadrático, luego,
+como bien podemos observar, el resultado obtenido en el análisis teórico se ajusta al obtenido empíricamente, luego, podemos
+concluir que la eficiencia del método ShuffleRows con la implementación del profesorado es de orden cuadrático.
+
+#####Segunda implementación del método ShuffleRows#####
+
+En esta [__hoja de excel__] se tienen los resultados de la ejecución del programa crear_eficiencia.cpp, para la implementación
+del método llevada a cabo por nosotros. A partir de esos datos, se ha usado la graficadora de excel para la generación
+de las nubes de putos ***(size, elapsed)***, de ***(rows, T rows)***, y de ***(cols, T cols)*** ,y sus respectivas curvas de
+regresión:
+@image html 8.png
+A simple vista, observamos que las curvas generadas ajustan bastante bien a los puntos, afirmación que se refuerza con
+con el coeficiente de correlación, calculado en la primer gráfica (0.837 (recordemos que cuanto más próximo a 1
+mejor ajusta la curva a la nube de puntos)). La función que representa la eficiencia del método y que más se ajusta a
+los tiempos obtenidos según el tamaño del problema especificado es:
+
+> ***g(x) = 7,47*x + 135***.
+
+El análisis teórico nos decía que el método era ***O(nrows)***, es decir, de orden lineal, luego,
+como bien podemos observar, en el análisis teórico, la eficiencia era de orden O(n), hecho que se ajusta a la obtenida empíricamente, luego, podemos
+concluir que la eficiencia del método ShuffleRows con nuestra implementación es de clase O(n); lineal.
+
+Por tanto, tras el análisis concluimos que el cambio de la representación interna de la clase contribuye a la mejora de
+la eficiencia del método shuffleRows, la cual pasa de ser cuadrática a ser **lineal**. De este modo, podemos destacar la
+importancia del uso de la abstracción en la implementación de los métodos de la clase, el cual ha posibilitado que puedan
+realizarse este tipo de cambios en el código sin grandes cambios en el resto de métodos de la clase.
+
+
+>> Práctica realizada por: ***Mario Megías Mateo y Quintín Mesa Romero***
+
+
+[__crear_eficiencia.cpp__]:https://drive.google.com/file/d/1e--q2_Osmy6E3dc7PKlUzwpWhZm9s4fY/view
+[__hoja de cálculo__]:https://docs.google.com/spreadsheets/d/1SYWKk1WPvJLRwuS6PJvXBKT9ls5G7o3wJFqPSaAuwaQ/edit#gid=0
+[__hoja de excel__]:https://docs.google.com/spreadsheets/d/1034-M1tBW7LyZGgVYQIj_lcJyICFL09z33jLlHnSsBk/edit#gid=0
+*/

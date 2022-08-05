@@ -1,0 +1,4 @@
+/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug/CMakeFiles/partida_letras.dir

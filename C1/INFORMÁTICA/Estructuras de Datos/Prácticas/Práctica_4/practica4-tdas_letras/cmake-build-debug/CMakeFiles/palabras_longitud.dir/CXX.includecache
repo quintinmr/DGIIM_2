@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../estudiante/include/dictionary.h
+set
+-
+vector
+-
+string
+-
+iterator
+-
+iostream
+-
+
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_4/practica4-tdas_letras/estudiante/src/palabras_longitud.cpp
+iostream
+-
+fstream
+-
+dictionary.h
+/home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_4/practica4-tdas_letras/estudiante/src/dictionary.h
+

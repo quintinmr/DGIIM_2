@@ -1,0 +1,5 @@
+PROJECT_NAME           = "Práctica 2. Imágenes"
+OUTPUT_DIRECTORY       = /home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/cmake-build-debug-coverage/doc_doxygen/
+INPUT                  = /home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/estudiante/include /home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/estudiante/src /home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/quintin/Documentos/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_2/practica2-imagenes/estudiante/doc

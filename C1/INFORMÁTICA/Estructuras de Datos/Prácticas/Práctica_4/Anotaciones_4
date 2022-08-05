@@ -1,0 +1,32 @@
+Método necesarios para la definición de un TDA no lineal de tipo Set:
+
+- Tamaño: size()
+- Vacío: empty()
+- Borrar: erase()
+- Vaciar: clear()
+- Insertar: insert()
+- Buscar: find()
+- Iterador inicio: begin()
+- Iterador fin: end()
+
+Método necesarios para la definición de un TDA no lineal de tipo Map:
+
+- Tamaño: size()
+- Vacío: empty()
+- Borrar: erase()
+- Vaciar: clear()
+- Insertar: insert()
+- Buscar: find()
+- Iterador inicio: begin()
+- Iterador fin: end()
+- Obtención de valor dada una clave: operator[]
+
+Pasos a seguir para trabajar con iteradores:
+1.Iniciar el iterador a la primera posición del contenedor (función begin()).
+2.Acceder al elemento que apunta (*it, donde it es de tipo iterador)
+3.Avanzar el iterador al siguiente elemento del contenedor (++it)
+4.Saber cuando hemos recorrido todos los elementos del contenedor (función end()).
+
+
+
+

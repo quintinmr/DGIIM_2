@@ -1,0 +1,5 @@
+/home/quintin/Documentos/clion-2021.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/quintin/Documentos/clion-2021.3/bin/ninja/linux/ninja -G Ninja /home/quintin/Documentos/Práctica5/practica5-solver
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/quintin/Documentos/Práctica5/practica5-solver/cmake-build-debug

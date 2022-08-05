@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 3. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/estudiante/include /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/estudiante/src /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/quintinmr/Documentos/DGIIM/2ºDGIIM/Informática/Estructuras_de_Datos/Prácticas/Práctica_3/practica3-colas_y_pilas/estudiante/doc
+EXTRACT_PRIVATE	       = NO

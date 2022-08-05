@@ -1,0 +1,104 @@
+/*! \mainpage TDAs Lineales. Pilas y Colas
+@image html stackvsqueue.png
+
+# Introducción
+
+A lo largo de la historia, el ser humano ha sido capaz de desarrollar infinidad de cosas que nos han hecho prosperar y
+evolucionar como sociedad. En gran parte gracias a su creatividad y capacidad de abstracción. Estas cualidades son las que
+al parecer destacaban en los ingenieros de la Standard Template Library, pues gracias a ellos hoy en día podemos implementar de
+forma sencilla estructuras de datos como son las pilas y las colas, que son los dos contenedores que estamos utilizando en
+el manto subyecente de los TDAs de la que esta práctica trata: el TDA Maxstack y el TDA MaxQueue. El primero de ellos consiste
+en implementar una pila con máximo a partir de una cola, y el segundo, una cola con máximo a partir de una pila. Los respectivos
+ejecutables son los que se especifican a continuación:
+
+# Ejecutables
+
+##Pila_max
+
+Este es un programa destinado tanto a la inserción de elementos enteros en la pila con máximo, como a mostrar por pantalla
+el tope de la pila cuando se estime oportuno, haciéndole un pop inmediatamente después. Esto último lo conseguimos pasando junto con los
+enteros que pasamos como argumentos, el carácter punto: ".".De esta forma, cuando le pasamos al programa los enteros que estimemos
+convenientes, este los va insertando y, en el momento en el que se lea un punto, se imprime por pantalla el tope de la pila en
+ese momento y, a continuación, se hace un pop, borrando dicho tope.
+Cuando ejecutamos el programa se imprime en pantalla el contenido de la pila en el formato: entero,maximo.
+
+> **pila_max** \<entero1\> \<entero2\> ... \<enterok\> \<...\>
+    @param "entero1", "entero2", ..., "enterok" Números enteros que se van a insertar en la pila con máximo
+    @param ". . ." Carácter punto, destinado a mostrar por pantalla el tope de la pila (dato de tipo element (valor,máximo))
+    y un pop del mismo.
+    @return Muestra en pantalla el contenido de la pila con máximo en el formato: entero,maximo.
+
+El código del programa se encuentra en el fichero pila_max.cpp:
+
+```csharp
+
+    #include <iostream>
+    #include "maxstack.h"
+
+    using namespace std;
+
+    int main(int argc, char *argv[]){
+
+        //  Run the current exercise
+        Maxstack stack;
+
+        for(int i = 1; i < argc; i++){
+            if (argv[i][0] == '.'){
+                cout << stack.top() << endl;
+                stack.pop();
+            } else {
+                stack.push(atoi(argv[i]));
+            }
+        }
+        return 0;
+    }
+    ```
+
+@image html stack_max.png
+
+##Cola_max
+
+Este es un programa destinado tanto a la inserción de elementos enteros en la cola con máximo, como a mostrar por pantalla
+el frente de la cola cuando se estime oportuno, haciéndole un pop inmediatamente después. Esto último lo conseguimos pasando junto con los
+enteros que pasamos como argumentos, el carácter punto: ".".De esta forma, cuando le pasamos al programa los enteros que estimemos
+convenientes, este los va insertando en el back de la cola y, en el momento en el que se lea un punto, se imprime por pantalla el frente de la misma en
+ese momento y, a continuación, se hace un pop, borrando dicho frente.
+Cuando ejecutamos el programa se imprime en pantalla el contenido de la cola en el formato: entero,maximo.
+
+> **cola_max** \<entero1\> \<entero2\> ... \<enterok\> \<...\>
+    @param "entero1", "entero2", ..., "enterok" Números enteros que se van a insertar en la cola con máximo
+    @param ". . ." Carácter punto, destinado a mostrar por pantalla el frente de la cola (dato de tipo element (valor,máximo))
+    y un pop del mismo.
+    @return Muestra en pantalla el contenido de la cola con máximo en el formato: entero,maximo.
+
+El código del programa se encuentra en el fichero cola_max.cpp:
+
+```csharp
+    #include <iostream>
+    #include <fstream>
+    #include <stdlib.h>
+    #include <string>
+    #include "maxqueue.h"
+
+    using namespace std;
+
+    int main(int argc, char *argv[]){
+
+        // // Run the current exercise
+        MaxQueue queue;
+
+        for(int i = 1; i < argc; i++){
+            if (argv[i][0] == '.'){
+                cout << queue.top() << endl;
+                queue.pop();
+            } else {
+            queue.push(atoi(argv[i]));
+            }
+        }
+     return 0;
+    }
+    ```
+
+@image html queue_max.png
+
+*/

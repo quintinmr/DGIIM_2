@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage -g CMakeFiles/subimagen.dir/estudiante/src/subimagen.cpp.o -o subimagen  libimage.a 

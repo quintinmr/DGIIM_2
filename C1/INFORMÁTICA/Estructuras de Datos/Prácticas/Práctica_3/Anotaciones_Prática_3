@@ -1,0 +1,126 @@
+#################################################################################
+
+MÉTODOS
+
+################################################################################
+Pila (stack)    
+
+-Consultar elemento --> top
+
+-Sacar_elementos (no devuelve el elemento, modifica la estructura) --> pop
+
+-Meter_elementos --> push
+
+-Número_elementos --> size
+
+-Vacía --> empty
+
+###############################################################################
+
+Cola (Queue)
+
+-Consultar elemento --> front 
+
+-Sacar elemento --> pop (en las STL) ó pop_front (cualquiera vale)
+-Meter elemeto --> push (en las STL) ó push_back (cualquiera vale)
+
+-Número de elemetos --> size
+
+-Vacío --> empty
+
+################################################################################
+
+EJEMPLO PILA A PARTIR DE UNA COLA
+
+pila                cola
+
+| 3 |  (top)    | 3 | | 2 | | 1 |
+                       
+| 2 |          front         back
+
+| 1 |
+
+
+Empecemos en primer lugar con la implementación de los métodos size y empty
+
+empty (pila) = empty(cola)
+
+size (pila) = size (cola)
+
+
+Ahora, consulta del top y front
+
+top (pila) = front (cola)
+
+El pop
+
+pop (pila) = pop (cola)
+
+
+
+El único método que no se implementa con una sola línea es el push
+
+Ejemplo:
+
+pila 
+                       cola
+| .. |
+
+| 5 |  (top)    | 5 | | 6 | | 3 |
+                       
+| 6 |          front         back
+
+| 3 |
+
+Queremos colocar otro elemento así que usamos una cola auxiliar, insertando el elemento que queremos meter y los demás elementos detrás, de la cola inicial.
+
+cola principal = cola auxiliar
+
+####
+
+Extracción del máximo.
+
+
+##################################################
+
+Ahora la cola
+
+
+| 3 | | 6 | | 5 |         | 3 |   Tope
+                       
+front         back        | 6 |
+
+                          | 5 |
+                          
+                          EL frente de cola va a coincidir con el tope de pila
+                          
+                       
+font = top 
+
+pop (cola) = pop (pila)
+
+
+El lío está en el push (la pila tiene el problema de que le da la vuelta a los elementos)
+No insertamos los elementos enn una estructura nueva porque nos interesa tenerlos ordenados, así que hacemos una doble inserción. En primer lugar metemos los elementos en una estructua axiliar y luego volvemos a llevarlos en el orden que nos intersa en la estructura inicial.
+
+En cuanto a la gestión del máximo en la cola:
+
+
+| 5|6 | | 6|6 | | 3|3 (aquí el máximo es el tres porque cuando al tres le toque salir, el máximo de la estructura es un 3 |       
+                       
+front            back 
+
+
+Queremos meter un  | 4 |
+
+Cuando vaciemos en una cola auxiliar, | 5|6 | | 6|6 | | 3|3 |   y volcamos en
+
+         | 5|6 |  
+                  
+         | 6|6 |
+
+         | 3|4 |
+         
+         | 4|4 |
+
+

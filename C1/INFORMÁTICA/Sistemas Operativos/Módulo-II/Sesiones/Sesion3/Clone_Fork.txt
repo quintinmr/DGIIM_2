@@ -1,0 +1,25 @@
+	
+	               DIFERENCIAS ENTRE LAS LLAMADAS AL SISTEMA CLONE Y FORK
+	
+   -->	La llamada al sistema flork() se implementa a través de la llamada clone()
+   -->  La llamada clone permite crear procesos e hilo con un grado mayor en cuanto al control de sus  
+        propiedades
+   -->  Cuando invocamos a clone(), se crea un proceso hijo que EMPIEZA A EJECUTAR LA FUNCIÓN QUE SE
+        LE PASA COMO ARGUMENTO A DICHA LLAMADA:
+             
+             int clone(int (*func) (void *), void *child_stack, int flags, void *func_arg,
+	     ...
+	
+   -->  Cuando invocamos a fork(), se crea un proceso hijo que EMPIEZA A EJECUTAR LA SIGUIENTE 	 
+        INSTRUCCIÓN A LA LLAMADA AL SISTEMA.
+        
+   -->  El hijo termina cuando la función retorna o cuando se hace un exit (o _exit)
+   -->  En clone debemos pasar un puntero a la pila que debe utilizar el hijo (child_stack)
+   -->  INDICADORES DE CLONACIÓN (flags):
+   	Tienen dos usos:
+   		--> El byte de orden menor sirve para especificar la señal de terminación del hijo  
+   		    (SIGCHLD, normalmente). Si está a 0, no se envía señal.
+   -->  Una diferencia con fork() es que en esta no podemos seleccionar la señal, la cual es siempre
+        SIGCHLD.	
+        
+        Restantes flags, en pdf.

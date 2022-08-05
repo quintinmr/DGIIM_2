@@ -1,0 +1,80 @@
+
+	COSILLAS A TENER EN CUENTA
+	
+	--> open devuelve el nuevo descriptor de archiv o -1 si ha fallado
+	    open(pathname, flags) 
+	    open(pathname, flags, mode)  Mode se ignora si no se especifica O_CREAT / O_TMPFILE
+	    El O_TRUNC se podrá especificar siempre y cuando tengamos permiso de escritura en el 
+	    archivo.
+	
+	--> read devuelve el número de bytes leidos (0 indica el final del archivo). Si
+	    falla, devuelve -1
+	    read (file_descriptor_donde_leemos, buffer_donde_escribimos, cuanto_leemos)
+	    
+	--> write devuelve el número de bytes que se han escrito. Si falla, devuelve -1.
+	    write(descriptor_archivo_donde_escribimos, buffer_de_donde_escribimos, 
+	    cuanto_escribimos)
+	    
+	--> sprintf se usa para escribir en un string. Lo mismo que print pero en un string.
+	--> strcpy (char buff[], "cadena") copia en buff "cadena".
+	--> strcmp Compara dos cadena. Devuelve 0 si son iguales, -1 en caso contrario.
+	    
+	--> lseek permite cambiar la posición actual de un archivo, es decir, el offset de un 
+            archivo.
+            lseek(descriptor_archivo, offset, constante_simbólica)
+            Constantes:
+            SEEK_SET
+              The file offset is set to offset bytes.
+
+            SEEK_CUR
+              The file offset is set to its current location plus offset bytes.
+
+            SEEK_END
+              The file offset is set to the size of the file plus offset bytes.
+	    
+	--> umask El umask se utiliza de esta forma:
+		  --> umask abc donde a,b,c son números enteros del 0 al 7.
+		  --> 1 significa para archivos ningún permiso
+		  --> 2 signigica para archivos permiso de escritura
+		  --> 4 significa para archivos permiso de lectura
+		  
+		  --> Funciona de la sguiente manera. Por ejemplo:
+		      Si quiero que los proximos archivos que se creen tengan
+		      permiso de lectura para el usuario, escritura y lectura para el grupo
+		      y ningún permiso para otros usuarios, sería: 4 6 1
+		      Lo que tengo que poner en umask son los permisos con los que NO van a aparecer
+		      los nuevos archivos que se creen, es decir, 777-461 = 316
+		      
+        --> chmod (pathname, mode) permite cambiar los permisos de un archivo, bien se haya 	
+            abierto, o bien no. En mode tenemos que poner or lógico (si procede) de las constantes 
+            simbólicas que aparecen en la tabla.
+        
+        --> fchmod (descriptor_archivo, mode) lo mismo que chmod pero el archivo tiene que haberse 
+            abierto previamente con open	
+           
+        --> opendir (pathname) abre un directorio, devolviendo un puntero al la estructura DIR
+        --> readdir (directorio) recibe un objeto de tipo DIR y devuelve un puntero a una estructura
+            dirent (devuelve la entrada donde está situado el puntero de lectura de un directorio ya
+            abierto), o NULL si llega al final del archivo. 
+            
+        --> nftw permite recorrer un subarbol de forma recursiva
+            nftw(dirpath, funcion, número_maximo_descriptores_usar, flags(or lógico con 0 o más 
+            constantes). Devuelve 0 si todas las invocaciones a func han retornado 0. Si retornan
+            un valor distinto de 0, entonces, nftw devuelve ese mismo valor.   
+		      
+        --> CREACIÓN DE CAUCES:
+        	--> CON NOMBRE:
+        		--> mknod (PATHNAME, MODE, DEV)
+        		--> mkfifo (PATHNAME, mode)
+        	--> SIN NOMBRE:
+        		--> pipe toma como argumento de un vector dos enteros:
+        			int fd[2]
+        			--> fd[0] = descriptor de archivo lectura (STDIN_FILENO)
+        			    direcciona la entrada estandar que se asigna por defecto
+        			    a un teclado
+        			--> fd[1] = descriptor de archivo lectura (STOUT_FILENO)
+        			    direcciona la salida estandar asignada, por defecto, la consola.
+        			    
+        		    La llamada al sistema pipe debe realizarse antes que la llamada al sistema
+        		    fork
+        		    El primer proceso que 

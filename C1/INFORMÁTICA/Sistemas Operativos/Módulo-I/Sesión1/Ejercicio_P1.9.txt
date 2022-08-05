@@ -1,0 +1,7 @@
+***************************************************
+EJERCICIO 9
+***************************************************
+
+/etc/fstab --> es una lista de sistemas de archivos que se montarán en el momento del arranque. Si desea que sus particiones de Windows o de almacenamiento de archivos se monten una vez que su computadora se inicia, deberá ingresar las entradas apropiadas en /etc/fstab.
+
+/etc/mtab --> es una lista de sistemas de archivos montados actualmente . Si tiene un disco conectado pero no montado, no aparecerá en el archivo /etc/mtab. Una vez que lo montes, aparecerá allí.

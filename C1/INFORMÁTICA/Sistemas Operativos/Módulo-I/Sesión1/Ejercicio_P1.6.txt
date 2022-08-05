@@ -1,0 +1,17 @@
+1)
+
+   [root@localhost ~]# groupadd grupo1
+   [root@localhost ~]# groupadd grupo2
+   [root@localhost ~]# gpasswd -a Torrebruno grupo1
+   Adding user Torrebruno to group grupo1
+   [root@localhost ~]# gpasswd -a Tobby grupo2
+   Adding user Tobby to group grupo2
+
+
+2) [root@localhost ~]# id
+   uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel)
+   [root@localhost ~]# id Torrebruno
+   uid=503(Torrebruno) gid=503(Torrebruno) groups=503(Torrebruno),504(grupo1)
+
+
+

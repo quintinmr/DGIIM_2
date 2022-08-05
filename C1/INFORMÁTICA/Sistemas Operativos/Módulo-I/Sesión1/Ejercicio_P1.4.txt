@@ -1,0 +1,37 @@
+[root@localhost ~]# cat /etc/passwd
+root::0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+saslauth:x:499:499:"Saslauthd user":/var/empty/saslauth:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+mailnull:x:47:47::/var/spool/mqueue:/sbin/nologin
+smmsp:x:51:51::/var/spool/mqueue:/sbin/nologin
+Elena:x:500:500::/home/Elena:/bin/bash
+Tobby:x:501:501::/home/Tobby:/bin/bash
+Rex:x:502:502:Hola:/home/Rex:/bin/bash
+Torrebruno:x:503:503:hello:/home/Torrebruno:/bin/bash
+
+
+Como bien podemos observar, cada una de las líneas que conforman este archivo son de la forma:
+
+usuario:contraseña(x):grupo(0,1,2,...):/comentario(en caso de habérselo introducido, o el nombre de usuario):/directorio/usuario/directorio/(el intérprete de órdenes que se ejecuta por defecto cada vez que entra al sistema)
+
+
+En cuanto a los permisos y el propietario del archivo, tenemos lo siguiennte (con la orden ls -l sobre el archivo /etc/passwd:
+
+[root@localhost ~]# ls -l /etc/passwd
+-rw-r--r-- 1 root root 1059 Sep 21 12:33 /etc/passwd
+
+
